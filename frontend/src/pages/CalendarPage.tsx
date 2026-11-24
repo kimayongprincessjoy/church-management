@@ -52,9 +52,9 @@ export default function CalendarPage() {
         <h2>{MONTH_NAMES[cursor.getMonth()]} {cursor.getFullYear()}</h2>
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
           <div className="btn-row" style={{ marginTop: 0 }}>
-            <button className="btn btn-ghost btn-sm" onClick={() => setCursor(new Date(cursor.getFullYear(), cursor.getMonth() - 1, 1))}>← Prev</button>
+            <button className="btn btn-ghost btn-sm" onClick={() => setCursor(new Date(cursor.getFullYear(), cursor.getMonth() - 1, 1))}>Previous</button>
             <button className="btn btn-ghost btn-sm" onClick={() => setCursor(new Date())}>Today</button>
-            <button className="btn btn-ghost btn-sm" onClick={() => setCursor(new Date(cursor.getFullYear(), cursor.getMonth() + 1, 1))}>Next →</button>
+            <button className="btn btn-ghost btn-sm" onClick={() => setCursor(new Date(cursor.getFullYear(), cursor.getMonth() + 1, 1))}>Next</button>
           </div>
           <select value={view} onChange={(e) => setView(e.target.value as any)}>
             <option value="month">Month</option><option value="week">Week</option>
